@@ -18,12 +18,33 @@
         <kotlin.version>1.5.21</kotlin.version>
     </properties>
 
-    <repositories>
+    <scm>
+        <connection>scm:git:https://github.com/AxonIQ/axon-dataprotection-config-api.git</connection>
+        <developerConnection>scm:git:https://github.com/AxonIQ/axon-dataprotection-config-api.git</developerConnection>
+        <url>https://github.com/AxonIQ/axon-dataprotection-config-api</url>
+        <tag>master</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>axoniq-nexus</id>
+            <url>https://nexus.dev.axoniq.net/repository/products-snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
         <repository>
-            <id>mavenCentral</id>
-            <url>https://repo1.maven.org/maven2/</url>
+            <id>axoniq-nexus</id>
+            <url>https://nexus.dev.axoniq.net/repository/products-releases</url>
+            <uniqueVersion>true</uniqueVersion>
         </repository>
-    </repositories>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <sourceDirectory>src/main/kotlin</sourceDirectory>
@@ -53,12 +74,9 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-    </dependencies>
+    <organization>
+        <name>AxonIQ BV</name>
+        <url>https://axoniq.io</url>
+    </organization>
 
 </project>
