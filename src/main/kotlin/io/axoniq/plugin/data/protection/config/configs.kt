@@ -25,7 +25,14 @@ data class DataProtectionConfig(
     val revision: String,
     val subjectId: SubjectIdConfig,
     val sensitiveData: List<SensitiveDataConfig>
-)
+) {
+    constructor(type: String, revision: String, subjectId: SubjectIdConfig, sensitiveData: SensitiveDataConfig) : this(
+        type,
+        revision,
+        subjectId,
+        listOf(sensitiveData)
+    )
+}
 
 data class SensitiveDataConfig(
     val path: Path,
