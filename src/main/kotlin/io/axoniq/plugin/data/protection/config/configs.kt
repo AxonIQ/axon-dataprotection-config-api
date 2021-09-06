@@ -36,7 +36,7 @@ data class DataProtectionConfig(
 
 data class SensitiveDataConfig(
     val path: Path,
-    val replacementValue: String
+    val replacementValue: String?
 )
 
 data class SubjectIdConfig(
