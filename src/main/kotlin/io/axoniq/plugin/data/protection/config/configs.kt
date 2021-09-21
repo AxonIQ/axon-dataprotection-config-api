@@ -16,10 +16,19 @@
 
 package io.axoniq.plugin.data.protection.config
 
+/**
+ * Simple alias to indicate a given String is a Json Path.
+ */
 typealias Path = String
 
+/**
+ * List container for [DataProtectionConfig].
+ */
 data class DataProtectionConfigList(val config: List<DataProtectionConfig> = listOf())
 
+/**
+ * Represents the config as an input.
+ */
 data class DataProtectionConfig(
     val type: String,
     val revision: String,
@@ -34,11 +43,17 @@ data class DataProtectionConfig(
     )
 }
 
+/**
+ * Represents each Sensitive Data configuration with its path and replacement value.
+ */
 data class SensitiveDataConfig(
     val path: Path,
     val replacementValue: String?
 )
 
+/**
+ * Represents the Subject ID, which usually is the key for Sensitive Data fields.
+ */
 data class SubjectIdConfig(
     val path: Path,
 )
