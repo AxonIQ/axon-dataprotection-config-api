@@ -24,12 +24,12 @@ package io.axoniq.plugin.data.protection.annotation
 annotation class SensitiveDataHolder
 
 /**
- * Represents a field that contains Sensitive Data. The replacement value is mandatory.
+ * Represents a field that contains Sensitive Data. The default value for replacement value is an empty string.
  */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FIELD)
 annotation class SensitiveData(
-    val replacementValue: String
+    val replacementValue: String = ""
 )
 
 /**

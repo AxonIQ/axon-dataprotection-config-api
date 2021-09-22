@@ -10,7 +10,7 @@ It contains only 2 files, one for Annotations and another for Configs. The most 
 - `SensitiveDataHolder`
   - Annotation to mark a class/event that contains any Sensitive Data field on it
 - `SensitiveData`
-  - Annotation to mark a field that is a Sensitive Data
+  - Annotation to mark a field that is a Sensitive Data. Default is an empty string.
 - `SubjectId`
   - Annotation to mark a field that is the Subject ID for a given `SensitiveDataHolder`
 
