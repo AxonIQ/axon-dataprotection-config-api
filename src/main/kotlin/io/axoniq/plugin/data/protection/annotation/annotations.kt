@@ -16,16 +16,25 @@
 
 package io.axoniq.plugin.data.protection.annotation
 
+/**
+ * Represents a class which holds Sensitive Data on it. Used to easily scan the Events what contains Sensitive Data.
+ */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.CLASS)
-annotation class PII
+annotation class SensitiveDataHolder
 
+/**
+ * Represents a field that contains Sensitive Data. The default value for replacement value is an empty string.
+ */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FIELD)
 annotation class SensitiveData(
-    val replacementValue: String
+    val replacementValue: String = ""
 )
 
+/**
+ * Represents the Subject ID, which usually is the key for Sensitive Data fields.
+ */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FIELD)
 annotation class SubjectId
