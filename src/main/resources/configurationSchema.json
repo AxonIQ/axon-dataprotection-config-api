@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$defs": {
+    "DataProtectionConfig": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "string"
+        },
+        "sensitiveData": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SensitiveDataConfig"
+          }
+        },
+        "subjectId": {
+          "$ref": "#/$defs/SubjectIdConfig"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "sensitiveData",
+        "subjectId",
+        "type"
+      ]
+    },
+    "SensitiveDataConfig": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "replacementValue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "SubjectIdConfig": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DataProtectionConfig"
+      }
+    }
+  },
+  "required": ["config"]
+}
