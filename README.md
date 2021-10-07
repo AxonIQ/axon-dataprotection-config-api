@@ -1,5 +1,8 @@
 # Axon Data Protection Config API
 
+[![Release](https://img.shields.io/github/release/AxonIQ/axon-dataprotection-config-api.svg?style=flat-square)](https://github.com/AxonIQ/axon-dataprotection-config-api/releases/latest)
+![Build Status](https://github.com/AxonIQ/axon-dataprotection-config-api/workflows/Axon%20Server%20Plugin%20-%20Data%20Protection/badge.svg?branch=master)
+
 This small project only serves as a shared library for Configuration classes and Annotations needed for Data Protection Projects in general.
 
 ---
