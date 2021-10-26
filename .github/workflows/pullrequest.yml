@@ -23,4 +23,4 @@ jobs:
           server-password: MAVEN_PASSWORD
 
       - name: Build and verify
-        run: mvn -B -U clean verify
+        run: ./mvnw -B -U clean verify
