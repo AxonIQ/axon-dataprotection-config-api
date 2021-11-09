@@ -47,7 +47,7 @@
 
     <scm>
         <connection>scm:git:git://github.com/AxonIQ/axon-dataprotection-config-api.git</connection>
-        <developerConnection>scm:git:https://github.com/AxonIQ/axon-dataprotection-config-api.git</developerConnection>
+        <developerConnection>scm:git:git://github.com/AxonIQ/axon-dataprotection-config-api.git</developerConnection>
         <url>https://github.com/AxonIQ/axon-dataprotection-config-api</url>
         <tag>HEAD</tag>
     </scm>
