@@ -1,5 +1,6 @@
 # Axon Data Protection Config API
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.axoniq/axon-dataprotection-config-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.axoniq/axon-dataprotection-config-api)
 [![Release](https://img.shields.io/github/release/AxonIQ/axon-dataprotection-config-api.svg?style=flat-square)](https://github.com/AxonIQ/axon-dataprotection-config-api/releases/latest)
 ![Build Status](https://github.com/AxonIQ/axon-dataprotection-config-api/workflows/Axon%20Data%20Protection%20Config%20API/badge.svg?branch=master)
 

@@ -134,7 +134,6 @@
             </activation>
             <build>
                 <plugins>
-                    <!-- source from kotlin -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -155,8 +154,8 @@
                         <version>${kotlin.version}</version>
                         <executions>
                             <execution>
+                                <id>attach-javadoc</id>
                                 <phase>package</phase>
-                                <id>attach-javadocs</id>
                                 <goals>
                                     <goal>javadocJar</goal>
                                     <goal>dokka</goal>
